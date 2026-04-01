@@ -1,39 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import axios from "axios"
-import ProductCart from './ProductCart';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ProductCart from "./ProductCart";
 
-const Product = ({h,info}) => {
+const Product = ({ h, info }) => {
+  const [card, setC] = useState([]);
+  const [loading, setL] = useState(true);
 
-    const [card, setC] = useState([])
-    const [loading, setL] = useState(true)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setL(true);
+        const res = await axios.get("Card.json");
+        setC(res.data);
+      } finally {
+        setL(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-    useEffect(() => {
-        const a = async () => {
-            try{
-                setL(true)
-                const b = await axios.get("Card.json")
-                setC(b.data)
-            }
-            finally{
-                setL(false)
-            }
-        }
-        a();
-    },[])
-
-    if(loading) return (
-        <div className='flex justify-center items-center'>
-            <span className="loading loading-infinity loading-lg text-8xl my-10 font-bold"></span>
-        </div>
-    )
-
+  if (loading) {
     return (
-        <div className='max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
-            {
-                card.map(v => <ProductCart key={v.id} p={v} h={h} info={info}></ProductCart>)
-            }
-        </div>
+      <div className="flex justify-center items-center min-h-[200px]">
+        <span className="loading loading-infinity loading-lg text-blue-600 my-10 font-bold"></span>
+      </div>
     );
+  }
+
+  return (
+    <div className="bg-gradient-to-r from-gray-50 via-white to-gray-100 py-16">
+      <div className="max-w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {card.map((v) => (
+          <ProductCart key={v.id} p={v} h={h} info={info} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Product;
