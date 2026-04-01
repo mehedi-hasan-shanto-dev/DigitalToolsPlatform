@@ -5,12 +5,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+/* Navbar Links */
 .navbar a {
-  color: #000; /* Black text */
+  color: #ffffff; /* White text for better contrast */
   font-weight: 600;
   margin: 0 12px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 .navbar a:hover {
-  color: #06b6d4; /* Cyan accent */
+  color: #facc15; /* Yellow accent on hover */
 }
