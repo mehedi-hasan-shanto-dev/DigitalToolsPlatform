@@ -2,27 +2,36 @@
 
 ## 📌 Project Overview
 
-DigiTools is a modern React-based web application that allows users to discover, select, and manage premium digital resources such as AI tools, templates, and productivity software. The project emphasizes a clean interface, responsive layouts, and a seamless user experience.
+🔗 **Live Demo (Netlify):** [whimsical-entremet-c5c4f5.netlify.app](https://whimsical-entremet-c5c4f5.netlify.app)  
+🔗 **GitHub Repository:** [DigitalToolsPlatform](https://github.com/mehedi-hasan-shanto-dev/DigitalToolsPlatform)
 
-## 🛠️ Technologies
+DigiTools is a modern React-based web application that empowers users to explore, select, and manage premium digital resources such as AI tools, templates, and productivity software. The platform is designed with a clean interface, responsive layouts, and a seamless user experience.
 
-- React.js
-- Tailwind CSS
-- DaisyUI
-- React Toastify
-- Axios
-- React Icons
+---
+
+## 🛠️ Technologies Used
+
+- **React.js**
+- **Tailwind CSS**
+- **DaisyUI**
+- **React Toastify**
+- **Axios**
+- **React Icons**
+
+---
 
 ## 🚀 Key Features
 
 1. **Smart Cart System**  
-   Users can add products to their cart effortlessly. Duplicate items are automatically prevented, with instant notifications for clarity.
+   Effortlessly add products to the cart. Duplicate items are automatically prevented with instant notifications.
 
 2. **Dynamic Product Rendering**  
-   Product data is fetched dynamically from a JSON file using Axios, ensuring scalability and flexibility.
+   Product data is dynamically fetched from a JSON file using Axios, ensuring scalability and flexibility.
 
 3. **Interactive Notifications**  
-   React Toastify provides real-time success and error alerts (e.g., item added successfully or already exists).
+   Real-time success and error alerts powered by React Toastify (e.g., item added successfully or already exists).
+
+---
 
 ## 🎨 UI Highlights
 
